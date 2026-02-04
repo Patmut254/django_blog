@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages','blog_main',
+    'django.contrib.messages','blog_main','blogs',
     'django.contrib.staticfiles',
 ]
 
@@ -122,4 +122,6 @@ STATICFILES_DIRS = [
     'blog_main/static'
 ]
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+    
