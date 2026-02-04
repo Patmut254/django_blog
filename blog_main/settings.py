@@ -120,7 +120,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
     'blog_main/static'
-    BASE_DIR / 'static'
 ]
 
 
