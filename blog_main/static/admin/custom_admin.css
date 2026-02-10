@@ -1,0 +1,55 @@
+:root {
+    --primary: #f59e0b;
+    /* warm amber */
+    --dark: #111827;
+    --light: #f9fafb;
+}
+
+/* Header */
+#header {
+    background: var(--dark);
+    color: white;
+}
+
+#site-name a {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.button,
+input[type="submit"],
+input[type="button"] {
+    background: var(--primary);
+    border: none;
+    color: #111;
+    border-radius: 6px;
+    padding: 6px 14px;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+/* Sidebar */
+.module caption {
+    background: var(--dark);
+    color: white;
+    font-weight: 600;
+}
+
+/* Content cards */
+.module {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Footer */
+.admin-footer {
+    text-align: center;
+    padding: 12px;
+    color: #6b7280;
+    font-size: 13px;
+}
