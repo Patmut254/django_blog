@@ -88,13 +88,16 @@
               </p>
             </div>
 
+            {% if social_links %}
             <div class="p-3">
               <h4 class="font-italic">Follow Me:</h4>
               <ol class="list-unstyled">
-                <li><a href="https://github.com/Patmut254/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/anitamutemi/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                {% for i in social_links %}
+                <li><a href="{{ i.link }}" target="_blank" rel="noopener noreferrer">{{ i.platform }}</a></li>
+                {% endfor %}
               </ol>
             </div>
+            {% endif %}
           </aside>
           <!-- /.blog-sidebar -->
         </div>
