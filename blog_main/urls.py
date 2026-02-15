@@ -25,12 +25,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('category/', include('blogs.urls')),
-    path('blogs/<slug:slug>/', BlogsView.blogs, name='blogs'),
-    #search endpoint
-    path('blogs/search/', BlogsView.search, name="search"),
-    #registration and login
-    path('register/', views.register, name='register')
 
+    # search first
+    path('blogs/search/', BlogsView.search, name="search"),
+
+    # then slug
+    path('blogs/<slug:slug>/', BlogsView.blogs, name='blogs'),
+
+    path('register/', views.register, name='register')
 ]
 
 if settings.DEBUG:
