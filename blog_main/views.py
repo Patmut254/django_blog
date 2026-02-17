@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from blogs.models import Blog, Category
 from assignments.models import About
+from .forms import RegistrationForm
 
 # Create your views here.
 
@@ -27,4 +28,8 @@ def home(request):
 
 
 def register(request):
-    return render(request, 'register.html')
+    form = RegistrationForm()
+    context ={
+        'form': form,
+    }
+    return render(request, 'register.html', context)
