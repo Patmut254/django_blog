@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from blogs.models import Blog, Category
 from assignments.models import About
 from .forms import RegistrationForm
+from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
 
@@ -41,3 +42,10 @@ def register(request):
         'form': form,
     }
     return render(request, 'register.html', context)
+
+def login(request):
+    form = AuthenticationForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'login.html', context)

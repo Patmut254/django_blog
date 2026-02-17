@@ -32,7 +32,9 @@ urlpatterns = [
     # then slug
     path('blogs/<slug:slug>/', BlogsView.blogs, name='blogs'),
 
-    path('register/', views.register, name='register')
+    path('register/', views.register, name='register'),
+
+    path('login/', views.login, name='login'),
 ]
 
 if settings.DEBUG:
