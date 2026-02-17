@@ -1,5 +1,5 @@
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from blogs.models import Blog, Category
 from assignments.models import About
 from .forms import RegistrationForm
@@ -28,7 +28,13 @@ def home(request):
 
 
 def register(request):
-    form = RegistrationForm()
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('register')
+    else:
+        form = RegistrationForm()
     context ={
         'form': form,
     }
