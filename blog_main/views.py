@@ -60,3 +60,7 @@ def login(request):
         'form': form,
     }
     return render(request, 'login.html', context)
+
+def logout(request):
+    auth.logout(request)
+    return redirect('home')
