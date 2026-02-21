@@ -41,11 +41,10 @@
             <a class="btn btn-sm btn-warning" href="{%url 'login' %}">Login</a> &nbsp;
             <a class="btn btn-sm btn-outline-secondary" href="{% url 'register' %}">Register</a>
             {% else %}
-            <span>Welcome <span class="font-weight-bold">
-              {{ user }}!
+            <span><a class="btn btn-sm btn-warning" href="{% url 'dashboard' %}">Dashboard</a>
             </span>
             </span>
-            &nbsp;&nbsp                                                                                          ;&nbsp;
+            &nbsp;&nbsp;&nbsp;
             <span><a class="btn btn-sm btn-outline-secondary" href="{% url 'logout' %}">Logout</a></span>
             {% endif %}
           </div>
