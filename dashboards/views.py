@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from blogs.models import Category, Blog
 
@@ -33,4 +33,22 @@ def add_category(request):
         'form': form,
     }
     return render(request, 'dashboard/add_category.html', context)
+
+def edit_category(request, pk):
+    category = get_object_or_404(Category, pk=pk)
+    
+    if request.method == 'POST':
+        # Use instance=category here
+        form = CategoryForm(request.POST, instance=category)
+        if form.is_valid():
+            form.save()
+            return redirect('categories') 
+    else:
+        form = CategoryForm(instance=category) 
+
+    context = {
+        'form': form,
+        'category': category,
+    }
+    return render(request, 'dashboard/edit_category.html', context)
 
