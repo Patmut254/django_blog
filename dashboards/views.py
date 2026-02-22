@@ -20,6 +20,6 @@ def dashboard(request):
 def categories(request):
     return render(request, 'dashboard/categories.html')
 
-def add_categories(request):
+def add_category(request):
     return render(request, 'dashboard/add_category.html')
 
