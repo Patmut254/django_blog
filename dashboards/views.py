@@ -52,3 +52,7 @@ def edit_category(request, pk):
     }
     return render(request, 'dashboard/edit_category.html', context)
 
+def delete_category(request, pk):
+     category = get_object_or_404(Category, pk=pk)
+     category.delete()    
+     return redirect('categories')
