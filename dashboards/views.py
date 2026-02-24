@@ -58,4 +58,11 @@ def delete_category(request, pk):
      return redirect('categories')
 
 def posts(request):
-    return render(request, 'dashboard/posts.html')
+    posts = Blog.objects.all()
+    context ={
+        'posts': posts,
+    }
+    return render(request, 'dashboard/posts.html', context)
+
+def add_post(request):
+    return render(request, 'dashboard/add_post.html')
