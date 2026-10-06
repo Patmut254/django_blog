@@ -43,8 +43,7 @@
       <p>{% if keyword %}Try a different keyword, or browse a category below.{% else %}Search across every story, or
         browse a category below.{% endif %}</p>
       <div class="chip-list chip-center">
-        {% for cat in categories %}<a href="{% url 'posts_by_category' cat.id %}" class="chip">{{ cat.category_name
-          }}</a>{% endfor %}
+        {% for cat in categories %}<a href="{% url 'posts_by_category' cat.id %}" class="chip">{{ cat.category_name }}</a>{% endfor %}
       </div>
     </div>
     {% endif %}

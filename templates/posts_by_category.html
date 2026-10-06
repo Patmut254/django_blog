@@ -8,8 +8,7 @@
 
 <section class="page-banner">
   <div class="wrap">
-    <nav class="crumbs"><a href="{% url 'home' %}">Home</a> <i class="fa fa-angle-right"></i> <span>{{ category
-        }}</span></nav>
+    <nav class="crumbs"><a href="{% url 'home' %}">Home</a> <i class="fa fa-angle-right"></i> <span>{{ category }}</span></nav>
     <h1>{{ category }}</h1>
     <p>{{ post_count }} stor{{ post_count|pluralize:"y,ies" }} in this category</p>
   </div>

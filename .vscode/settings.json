@@ -1,0 +1,6 @@
+{
+  // Django template tags must stay on one line, so don't let the HTML formatter wrap them
+  "html.format.wrapLineLength": 0,
+  "html.format.wrapAttributes": "auto",
+  "prettier.printWidth": 1000
+}

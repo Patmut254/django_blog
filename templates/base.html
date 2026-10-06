@@ -91,8 +91,7 @@
         <a href="{% url 'all_posts' %}" class="{% if request.path == '/blogs/' %}active{% endif %}">All Stories</a>
         {% for cat in categories %}
         <a href="{% url 'posts_by_category' cat.id %}"
-          class="{% if category.id == cat.id or single_blog.category_id == cat.id %}active{% endif %}">{{
-          cat.category_name }}</a>
+          class="{% if category.id == cat.id or single_blog.category_id == cat.id %}active{% endif %}">{{ cat.category_name }}</a>
         {% endfor %}
         <form class="nav-search" action="{% url 'search' %}" method="GET">
           <input type="text" name="keyword" placeholder="Search..." aria-label="Search" />
