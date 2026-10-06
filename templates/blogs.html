@@ -1,63 +1,105 @@
 {% extends 'base.html' %}
+{% load blog_extras %}
 
-  {% block content %}
+{% block title %}{{ single_blog.title }} - Gio's Corner{% endblock %}
+{% block main_class %}{% endblock %}
 
-  <!-- Page content-->
-  <div class="container mt-5">
-      <div class="row">
-          <div class="col-lg-8">
-              <!-- Post content-->
-              <article>
-                  <!-- Post header-->
-                  <header class="mb-4">
-                      <!-- Post title-->
-                      <h1 class="fw-bolder mb-1">{{ single_blog.title}}</h1>
-                      <!-- Post meta content-->
-                      <div class="text-muted fst-italic mb-2">Posted on {{ single_blog.created_at }} by {{ single_blog.author }}</div>
-                      <!-- Post category-->
-                      <a class="badge bg-warning text-decoration-none text-light" href="#!">{{ single_blog.category }}</a>
-                  </header>
-                  <!-- Preview image figure-->
-                  <figure class="mb-4"><img class="img-fluid rounded" src="{{ single_blog.featured_image.url }}" alt="..." /></figure>
-                  <!-- Post content-->
-                  <section class="mb-5">
-                      <p class="fs-5 mb-4">{{ single_blog.short_description }}</p>
-                      <p class="fs-5 mb-4">{{ single_blog.blog_body }}</p>
-                      </section>
-              </article>
-          </div>
-          <!-- Side widgets-->
-          <div class="col-lg-4">
+{% block content %}
 
-              <!-- Categories widget-->
-              <div class="card mb-4 p-3">
-                  <h4 class="font-italic">Categories</h4>
-                  <div class="card-body">
-                      <div class="row">
-                          <div class="col-sm-6">
-                              <ul class="list-unstyled mb-0">
-                                {% for cat in categories %}
-                                <li><a href="{% url 'posts_by_category' cat.id %}">{{ cat.category_name }}</a></li>
-                                {% endfor %}
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- Side widget-->
-              {% if social_links %}
-              <div class="card mb-4 p-3">
-                  <h4 class="font-italic">Follow Me:</h4>
-                  <ol class="list-unstyled">
-                  {% for i in social_links %}
-                    <li><a href="{{ i.link }}" target="_blank" rel="noopener noreferrer">{{ i.platform }}</a></li>
-                  {% endfor %}
-                  </ol>
-              </div>
-              {% endif %}
-          </div>
-      </div>
+<!-- Article header -->
+<section class="article-hero">
+  <img src="{{ single_blog.image|resize:2000 }}" alt="{{ single_blog.title }}" />
+  <div class="wrap article-hero-content">
+    <nav class="crumbs">
+      <a href="{% url 'home' %}">Home</a> <i class="fa fa-angle-right"></i>
+      <a href="{% url 'posts_by_category' single_blog.category_id %}">{{ single_blog.category }}</a>
+    </nav>
+    <a class="tag tag-solid" href="{% url 'posts_by_category' single_blog.category_id %}">{{ single_blog.category }}</a>
+    <h1>{{ single_blog.title }}</h1>
+    <div class="article-meta">
+      <span class="avatar avatar-sm">{{ single_blog.author.username|first|upper }}</span>
+      <span>By <strong>{{ single_blog.author }}</strong></span>
+      <span><i class="fa fa-calendar-o"></i> {{ single_blog.created_at|date:"F j, Y" }}</span>
+      <span><i class="fa fa-clock-o"></i> {{ single_blog.read_time }} min read</span>
+      <span><i class="fa fa-eye"></i> {{ single_blog.views|add:1 }} views</span>
+    </div>
   </div>
+</section>
 
+<div class="wrap split article-layout">
+  <!-- Post content-->
+  <article class="article">
+    <p class="article-lead">{{ single_blog.short_description }}</p>
+    <div class="article-body">
+      {{ single_blog.blog_body|linebreaks }}
+    </div>
 
-  {% endblock %}
+    <div class="share">
+      <span>Share this story</span>
+      <a href="https://twitter.com/intent/tweet?url={{ share_url|urlencode }}&text={{ single_blog.title|urlencode }}"
+        target="_blank" rel="noopener noreferrer" aria-label="Share on X"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url|urlencode }}" target="_blank"
+        rel="noopener noreferrer" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url|urlencode }}" target="_blank"
+        rel="noopener noreferrer" aria-label="Share on LinkedIn"><i class="fa fa-linkedin"></i></a>
+      <a href="https://wa.me/?text={{ single_blog.title|urlencode }}%20{{ share_url|urlencode }}" target="_blank"
+        rel="noopener noreferrer" aria-label="Share on WhatsApp"><i class="fa fa-whatsapp"></i></a>
+      <button type="button" data-copy="{{ share_url }}" aria-label="Copy link"><i class="fa fa-link"></i> <span>Copy
+          link</span></button>
+    </div>
+
+    <nav class="prev-next">
+      {% if prev_post %}
+      <a href="{% url 'blogs' prev_post.slug %}" class="pn-prev"><small><i class="fa fa-angle-left"></i>
+          Previous</small><strong>{{ prev_post.title }}</strong></a>
+      {% else %}<span></span>{% endif %}
+      {% if next_post %}
+      <a href="{% url 'blogs' next_post.slug %}" class="pn-next"><small>Next <i
+            class="fa fa-angle-right"></i></small><strong>{{ next_post.title }}</strong></a>
+      {% endif %}
+    </nav>
+  </article>
+
+  <!-- Side widgets-->
+  <div class="sidebar">
+    {% include 'includes/top_stories.html' %}
+
+    <div class="panel">
+      <h2 class="panel-title">Categories</h2>
+      <div class="chip-list">
+        {% for cat in categories %}
+        <a href="{% url 'posts_by_category' cat.id %}"
+          class="chip {% if cat.id == single_blog.category_id %}active{% endif %}">{{ cat.category_name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if social_links %}
+    <div class="panel">
+      <h2 class="panel-title">Follow Me</h2>
+      <div class="follow-list">
+        {% for i in social_links %}
+        <a href="{{ i.link }}" target="_blank" rel="noopener noreferrer"><i class="fa {{ i.platform|social_icon }}"></i>
+          {{ i.platform }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% if related_posts %}
+<section class="wrap">
+  <div class="section-head">
+    <h2 class="section-title">More in {{ single_blog.category }}</h2>
+    <a href="{% url 'posts_by_category' single_blog.category_id %}" class="view-all">View All</a>
+  </div>
+  <div class="story-grid">
+    {% for post in related_posts %}
+    {% include 'includes/post_card.html' %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

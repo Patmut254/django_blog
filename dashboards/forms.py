@@ -10,4 +10,4 @@ class CategoryForm(forms.ModelForm):
 class BlogPlatform(forms.ModelForm):
     class Meta:
         model = Blog
-        fields = ['title', 'category', 'author', 'status', 'is_featured']
+        fields = ['title', 'category', 'featured_image', 'image_url', 'short_description', 'blog_body', 'status', 'is_featured']

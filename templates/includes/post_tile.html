@@ -1,0 +1,9 @@
+{% load blog_extras %}
+<a href="{% url 'blogs' post.slug %}" class="tile {{ tile_class }}">
+  <img src="{{ post.image|resize:size }}" alt="{{ post.title }}" loading="lazy" />
+  <div class="tile-body">
+    <span class="tag">{{ post.category }}</span>
+    <h3>{{ post.title }}</h3>
+    <small>{{ post.created_at|ago }}</small>
+  </div>
+</a>

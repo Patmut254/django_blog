@@ -1,37 +1,56 @@
 {% extends 'base.html' %}
+{% load blog_extras %}
 
-  {% block content%}
+{% block title %}{{ category }} - Gio's Corner{% endblock %}
+{% block main_class %}{% endblock %}
 
-      <!-- Featured Posts -->
-      <h3 class="text-uppercase text-warning" style="letter-spacing: 2px">
-        Category - {{ category }}
-      </h3>
+{% block content%}
 
-      <div class="row mb-2">
-        {% if posts %}
-        {% for post in posts %} 
-        <div class="col-md-6">
-          <div class="card border-0">
-            <div class="card-body">
-              <h3><a href="{% url 'blogs' post.slug %}" class="text-dark">{{ post.title }}</a></h3>
-              <small class="mb-1 text-muted"
-                >{{ post.created_at | timesince }} ago |
-                {{ post.author }}</small
-              >
-              <p class="card-text">
-                {{ post.short_description | truncatewords:15 }}
-              </p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        {% else %}
-        <p>No post found</p>
+<section class="page-banner">
+  <div class="wrap">
+    <nav class="crumbs"><a href="{% url 'home' %}">Home</a> <i class="fa fa-angle-right"></i> <span>{{ category
+        }}</span></nav>
+    <h1>{{ category }}</h1>
+    <p>{{ post_count }} stor{{ post_count|pluralize:"y,ies" }} in this category</p>
+  </div>
+</section>
 
-        {% endif %}
-      </div>
-
-      <!-- /.container -->
+{% if posts %}
+{% if lead_post %}
+<section class="wrap">
+  <a href="{% url 'blogs' lead_post.slug %}" class="lead-story">
+    <img src="{{ lead_post.image|resize:1400 }}" alt="{{ lead_post.title }}" />
+    <div class="lead-story-body">
+      <span class="tag tag-solid">Latest in {{ category }}</span>
+      <h2>{{ lead_post.title }}</h2>
+      <p>{{ lead_post.short_description|truncatewords:35 }}</p>
+      <small>{{ lead_post.author }} · {{ lead_post.created_at|ago }} · {{ lead_post.read_time }} min read</small>
     </div>
-  {% endblock %}
- 
+  </a>
+</section>
+{% endif %}
+
+<section class="wrap split">
+  <div>
+    <div class="section-head">
+      <h2 class="section-title">All {{ category }} Stories</h2>
+    </div>
+    <div class="story-grid story-grid-3">
+      {% for post in posts %}
+      {% include 'includes/post_card.html' %}
+      {% endfor %}
+    </div>
+    {% include 'includes/pagination.html' with page=posts %}
+  </div>
+  {% include 'includes/top_stories.html' %}
+</section>
+{% else %}
+<section class="wrap empty-state">
+  <i class="fa fa-newspaper-o"></i>
+  <h2>No post found</h2>
+  <p>There are no published stories in {{ category }} yet. Check back soon.</p>
+  <a href="{% url 'home' %}" class="btn-primary">Back to home</a>
+</section>
+{% endif %}
+
+{% endblock %}

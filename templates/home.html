@@ -1,109 +1,143 @@
 {% extends 'base.html' %}
+{% load blog_extras %}
+
+  {% block main_class %}{% endblock %}
 
   {% block content %}
 
-      {% for post in featured_posts %} {% if forloop.first %}
-      <div
-        class="jumbotron p-3 p-md-5 text-white rounded bg-dark"
-        style="
-          background-image: url({{ post.featured_image.url }});
-          background-blend-mode: overlay;
-          background-size: cover;
-        "
-      >
-        <div class="col-md-8 px-0">
-          <h1 class="display-4 font-italic">
-            {{ post.title }}
-          </h1>
-          <p class="lead my-3">
-            {{ post.short_description | truncatewords:10 }}
-            <!-- truncatechars for characters -->
-          </p>
-          <p class="lead mb-0">
-            <a href="{% url 'blogs' post.slug %}" class="text-white font-weight-bold"
-              >Continue reading...</a
-            >
-          </p>
-        </div>
+  <!-- Latest strip -->
+  <section class="wrap ticker">
+    {% for post in ticker_posts %}
+    <a href="{% url 'blogs' post.slug %}" class="ticker-item">
+      <img src="{{ post.image|resize:200 }}" alt="" loading="lazy" />
+      <div>
+        <h4>{{ post.title|truncatechars:60 }}</h4>
+        <small>{{ post.category }} · {{ post.created_at|ago }}</small>
       </div>
-      {% endif %} {% endfor %}
+    </a>
+    {% endfor %}
+  </section>
 
-      <!-- Featured Posts -->
-      <h3 class="text-uppercase text-warning" style="letter-spacing: 2px">
-        Featured Posts
-      </h3>
-
-      <div class="row mb-2">
-        {% for post in featured_posts %} {% if not forloop.first %}
-        <div class="col-md-6">
-          <div class="card border-0">
-            <div class="card-body">
-              <h3><a href="{% url 'blogs' post.slug %}" class="text-dark">{{ post.title }}</a></h3>
-              <small class="mb-1 text-muted"
-                >{{ post.created_at | timesince }} ago |
-                {{ post.author }}</small
-              >
-              <p class="card-text">
-                {{ post.short_description | truncatewords:15 }}
-              </p>
-            </div>
+  <!-- Hero slider + latest headlines -->
+  <section class="wrap">
+    <div class="hero">
+      <div class="hero-slider" data-slider>
+        {% for post in featured_posts %}
+        <article class="hero-slide {% if forloop.first %}is-active{% endif %}" data-slide>
+          <img src="{{ post.image|resize:1800 }}" alt="{{ post.title }}" {% if not forloop.first %}loading="lazy"{% endif %} />
+          <span class="tag tag-solid">{{ post.category }}</span>
+          <div class="hero-content">
+            <span class="hero-kicker">Featured story</span>
+            <h1><a href="{% url 'blogs' post.slug %}">{{ post.title }}</a></h1>
+            <p>{{ post.short_description|truncatewords:28 }}</p>
+            <a href="{% url 'blogs' post.slug %}" class="btn-light">Read Full Story <i class="fa fa-long-arrow-right"></i></a>
           </div>
+        </article>
+        {% endfor %}
+        {% if featured_posts|length > 1 %}
+        <button class="hero-arrow prev" type="button" aria-label="Previous story" data-prev><i class="fa fa-angle-left"></i></button>
+        <button class="hero-arrow next" type="button" aria-label="Next story" data-next><i class="fa fa-angle-right"></i></button>
+        <div class="hero-dots">
+          {% for post in featured_posts %}
+          <button type="button" class="{% if forloop.first %}is-active{% endif %}" aria-label="Show story {{ forloop.counter }}" data-dot="{{ forloop.counter0 }}"></button>
+          {% endfor %}
         </div>
-        {% endif %} {% endfor %}
+        {% endif %}
       </div>
 
-      <!-- Recent Articles -->
-
-      <h3 class="text-uppercase text-warning" style="letter-spacing: 2px">
-        Recent Articles
-      </h3>
-
-      <main role="main" class="container p-0">
-        <div class="row">
-          <div class="col-md-8 blog-main">
-            {% for post in posts %}
-            <div class="card border-0">
-              <div class="card-body">
-                <h3><a href="{% url 'blogs' post.slug %}" class="text-dark">{{ post.title }}</a></h3>
-                <small class="mb-1 text-muted"
-                  >{{ post.created_at | timesince }} ago |
-                  {{ post.author }}</small
-                >
-                <p class="card-text">
-                  {{ post.short_description | truncatewords:17 }}
-                </p>
+      <aside class="hero-side">
+        <div class="section-head">
+          <h2 class="panel-title">Latest Headlines</h2>
+          <a href="{% url 'all_posts' %}" class="view-all">View All</a>
+        </div>
+        <ul>
+          {% for post in headline_posts %}
+          <li>
+            <a href="{% url 'blogs' post.slug %}">
+              <div>
+                <small><span class="dot-cat">{{ post.category }}</span> · {{ post.created_at|date:"j M" }}</small>
+                <strong>{{ post.title }}</strong>
               </div>
-            </div>
-            {% endfor %}
-
-            <!-- /.blog-post -->
-          </div>
-          <!-- /.blog-main -->
-
-          <aside class="col-md-4 blog-sidebar">
-            <div class="p-3 mb-3 bg-light rounded">
-              <h4 class="font-italic">{{ about.about_heading }}</h4>
-              <p class="mb-0">
-                  {{ about.about_description }}
-              </p>
-            </div>
-
-            {% if social_links %}
-            <div class="p-3">
-              <h4 class="font-italic">Follow Me:</h4>
-              <ol class="list-unstyled">
-                {% for i in social_links %}
-                <li><a href="{{ i.link }}" target="_blank" rel="noopener noreferrer">{{ i.platform }}</a></li>
-                {% endfor %}
-              </ol>
-            </div>
-            {% endif %}
-          </aside>
-          <!-- /.blog-sidebar -->
-        </div>
-        <!-- /.row -->
-      </main>
-      <!-- /.container -->
+              <img src="{{ post.image|resize:160 }}" alt="" loading="lazy" />
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
     </div>
+  </section>
+
+  <!-- Don't miss + top stories -->
+  <section class="wrap split">
+    <div>
+      <div class="section-head">
+        <h2 class="section-title">Don't Miss</h2>
+        <a href="{% url 'all_posts' %}" class="view-all">View All</a>
+      </div>
+      <div class="dont-miss">
+        {% for post in dont_miss %}
+          {% if forloop.first %}
+            {% include 'includes/post_tile.html' with tile_class='tile-lg' size=1000 %}
+          {% else %}
+            {% include 'includes/post_tile.html' with size=600 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% include 'includes/top_stories.html' %}
+  </section>
+
+  <!-- Editor's picks -->
+  {% if editors_picks %}
+  <section class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Editor's Picks</h2>
+      <a href="{% url 'all_posts' %}" class="view-all">View All</a>
+    </div>
+    <div class="picks">
+      {% for post in editors_picks %}
+      {% if forloop.first %}
+      <a href="{% url 'blogs' post.slug %}" class="tile tile-wide">
+        <img src="{{ post.image|resize:1400 }}" alt="{{ post.title }}" loading="lazy" />
+        <span class="tag tag-solid tag-top">Must read</span>
+        <span class="play"><i class="fa fa-book"></i></span>
+        <div class="tile-body">
+          <h3>{{ post.title }}</h3>
+          <small><span class="live-dot"></span>{{ post.category }} · {{ post.read_time }} min read</small>
+        </div>
+      </a>
+      <div class="picks-list">
+      {% else %}
+        <a href="{% url 'blogs' post.slug %}" class="pick">
+          <span class="pick-thumb">
+            <img src="{{ post.image|resize:400 }}" alt="" loading="lazy" />
+            <span class="pick-time"><i class="fa fa-clock-o"></i> {{ post.read_time }} min</span>
+          </span>
+          <span class="pick-body">
+            <strong>{{ post.title }}</strong>
+            <small>{{ post.category }} · {{ post.created_at|ago }}</small>
+          </span>
+        </a>
+      {% endif %}
+      {% if forloop.last %}</div>{% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Latest stories -->
+  {% if latest_posts %}
+  <section class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Latest Stories</h2>
+      <a href="{% url 'all_posts' %}" class="view-all">View All</a>
+    </div>
+    <div class="story-grid">
+      {% for post in latest_posts %}
+        {% include 'includes/post_card.html' %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
 
   {% endblock %}

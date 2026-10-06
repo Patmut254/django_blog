@@ -4,19 +4,25 @@ from blogs.models import Blog, Category
 from assignments.models import About
 from .forms import RegistrationForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib import auth
+from django.contrib import auth, messages
 
 # Create your views here.
 
 
 def home(request):
-    featured_posts = Blog.objects.filter(is_featured=True, status='Published').order_by('updated_at')
-    posts = Blog.objects.filter(is_featured=False, status='Published').order_by('updated_at')
+    published = Blog.objects.filter(status='Published').select_related('category', 'author')
+    latest = published.order_by('-created_at')
+    featured_posts = list(published.filter(is_featured=True).order_by('-created_at')[:5]) or list(latest[:5])
+    posts = Blog.objects.filter(is_featured=False, status='Published').order_by('-created_at')
+
+    # every section after the hero shows posts that haven't appeared yet
+    shown = {p.pk for p in featured_posts}
+    rest = [p for p in latest if p.pk not in shown]
 
     #fetch about us
     try:
         about = About.objects.get()
-    except:
+    except (About.DoesNotExist, About.MultipleObjectsReturned):
         about=None
 
     
@@ -24,6 +30,11 @@ def home(request):
         'featured_posts': featured_posts,
         'posts': posts,
         'about': about,
+        'ticker_posts': latest[:4],
+        'headline_posts': rest[:5],
+        'dont_miss': rest[5:10],
+        'editors_picks': rest[10:14],
+        'latest_posts': rest[14:22],
     }
     
     return render(request, 'home.html', context)
@@ -34,9 +45,8 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('register')
-        else:
-            print(form.errors)
+            messages.success(request, 'Account created. You can now log in.')
+            return redirect('login')
     else:
         form = RegistrationForm()
     context ={
@@ -55,7 +65,8 @@ def login(request):
             if user is not None:
                 auth.login(request, user)
             return redirect('dashboard')
-    form = AuthenticationForm()
+    else:
+        form = AuthenticationForm()
     context = {
         'form': form,
     }

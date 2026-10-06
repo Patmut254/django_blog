@@ -27,7 +27,9 @@ urlpatterns = [
     path('category/', include('blogs.urls')),
 
     # search first
+    path('blogs/', BlogsView.all_posts, name='all_posts'),
     path('blogs/search/', BlogsView.search, name="search"),
+    path('subscribe/', BlogsView.subscribe, name='subscribe'),
 
     # then slug
     path('blogs/<slug:slug>/', BlogsView.blogs, name='blogs'),

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}All Stories - Gio's Corner{% endblock %}
+{% block main_class %}{% endblock %}
+
+{% block content %}
+
+<section class="page-banner">
+  <div class="wrap">
+    <nav class="crumbs"><a href="{% url 'home' %}">Home</a> <i class="fa fa-angle-right"></i> <span>All Stories</span>
+    </nav>
+    <h1>All Stories</h1>
+    <p>{{ posts.paginator.count }} published stories across every category</p>
+  </div>
+</section>
+
+<section class="wrap split">
+  <div>
+    <div class="story-grid story-grid-3">
+      {% for post in posts %}
+      {% include 'includes/post_card.html' %}
+      {% endfor %}
+    </div>
+    {% include 'includes/pagination.html' with page=posts %}
+  </div>
+  {% include 'includes/top_stories.html' %}
+</section>
+
+{% endblock %}

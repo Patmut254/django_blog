@@ -4,7 +4,7 @@ from blogs.models import Category, Blog
 
 from django.contrib.auth.decorators import login_required
 
-from .forms import CategoryForm
+from .forms import CategoryForm, BlogPlatform
 
 @login_required(login_url='login')
 # Create your views here.
@@ -58,11 +58,24 @@ def delete_category(request, pk):
      return redirect('categories')
 
 def posts(request):
-    posts = Blog.objects.all()
+    posts = Blog.objects.all().order_by('-created_at')
     context ={
         'posts': posts,
     }
     return render(request, 'dashboard/posts.html', context)
 
+@login_required(login_url='login')
 def add_post(request):
-    return render(request, 'dashboard/add_post.html')
+    if request.method == 'POST':
+        form = BlogPlatform(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('posts')
+    else:
+        form = BlogPlatform()
+    context = {
+        'form': form,
+    }
+    return render(request, 'dashboard/add_post.html', context)

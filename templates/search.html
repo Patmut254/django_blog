@@ -1,37 +1,55 @@
 {% extends 'base.html' %}
+{% load blog_extras %}
+
+{% block title %}Search{% if keyword %}: {{ keyword }}{% endif %} - Gio's Corner{% endblock %}
+{% block main_class %}{% endblock %}
 
 {% block content%}
 
-    <!-- Featured Posts -->
-    <h3 class="text-warning" style="letter-spacing: 2px">
-    Search Term - {{ keyword }}
-    </h3>
+<section class="page-banner">
+  <div class="wrap">
+    <nav class="crumbs"><a href="{% url 'home' %}">Home</a> <i class="fa fa-angle-right"></i> <span>Search</span></nav>
+    <h1>{% if keyword %}Search Term - “{{ keyword }}”{% else %}Search{% endif %}</h1>
+    <form class="banner-search" action="{% url 'search' %}" method="GET">
+      <input type="text" name="keyword" value="{{ keyword }}" placeholder="Try “travel”, “football” or “AI”"
+        aria-label="Search" />
+      <button type="submit"><i class="fa fa-search"></i> Search</button>
+    </form>
+    {% if keyword %}<p>{{ blogs|length }} result{{ blogs|length|pluralize }} found</p>{% endif %}
+  </div>
+</section>
 
-    <div class="row mb-2">
+<section class="wrap split">
+  <div>
     {% if blogs %}
-    {% for i in blogs %} 
-    <div class="col-md-6">
-        <div class="card border-0">
-        <div class="card-body">
-            <h3><a href="{% url 'blogs' i.slug %}" class="text-dark">{{ i.title }}</a></h3>
-            <small class="mb-1 text-muted"
-            >{{ i.created_at | timesince }} ago |
-            {{ i.author }}</small
-            >
-            <p class="card-text">
-            {{ i.short_description | truncatewords:15 }}
-            </p>
+    <div class="result-list">
+      {% for i in blogs %}
+      <article class="result">
+        <a href="{% url 'blogs' i.slug %}" class="result-img"><img src="{{ i.image|resize:500 }}" alt=""
+            loading="lazy" /></a>
+        <div>
+          <a href="{% url 'posts_by_category' i.category_id %}" class="story-cat">{{ i.category }}</a>
+          <h3><a href="{% url 'blogs' i.slug %}">{{ i.title }}</a></h3>
+          <p>{{ i.short_description|truncatewords:30 }}</p>
+          <small>{{ i.author }} · {{ i.created_at|ago }}</small>
         </div>
-        </div>
+      </article>
+      {% endfor %}
     </div>
-    {% endfor %}
     {% else %}
-    <p>No blog found</p>
-
+    <div class="empty-state">
+      <i class="fa fa-search"></i>
+      <h2>{% if keyword %}No blog found{% else %}What are you looking for?{% endif %}</h2>
+      <p>{% if keyword %}Try a different keyword, or browse a category below.{% else %}Search across every story, or
+        browse a category below.{% endif %}</p>
+      <div class="chip-list chip-center">
+        {% for cat in categories %}<a href="{% url 'posts_by_category' cat.id %}" class="chip">{{ cat.category_name
+          }}</a>{% endfor %}
+      </div>
+    </div>
     {% endif %}
-    </div>
-
-    <!-- /.container -->
-    </div>
+  </div>
+  {% include 'includes/top_stories.html' %}
+</section>
 
 {% endblock %}

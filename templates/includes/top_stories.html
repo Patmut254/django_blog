@@ -1,0 +1,19 @@
+{% load blog_extras %}
+<aside class="panel top-stories">
+  <div class="section-head">
+    <h2 class="panel-title">Top Stories</h2>
+    <a href="{% url 'all_posts' %}" class="view-all">View All</a>
+  </div>
+  <ol>
+    {% for post in top_stories %}
+    <li>
+      <span class="rank">{{ forloop.counter }}</span>
+      <div class="rank-body">
+        <a href="{% url 'blogs' post.slug %}">{{ post.title }}</a>
+        <small>{{ post.created_at|ago }}</small>
+      </div>
+      <a href="{% url 'blogs' post.slug %}" class="rank-thumb"><img src="{{ post.image|resize:160 }}" alt="" loading="lazy" /></a>
+    </li>
+    {% endfor %}
+  </ol>
+</aside>

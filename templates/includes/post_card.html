@@ -1,0 +1,12 @@
+{% load blog_extras %}
+<article class="story">
+  <a href="{% url 'blogs' post.slug %}" class="story-img">
+    <img src="{{ post.image|resize:700 }}" alt="{{ post.title }}" loading="lazy" />
+  </a>
+  <div class="story-body">
+    <a href="{% url 'posts_by_category' post.category_id %}" class="story-cat">{{ post.category }}</a>
+    <h3><a href="{% url 'blogs' post.slug %}">{{ post.title }}</a></h3>
+    <p>{{ post.short_description|truncatewords:22 }}</p>
+    <small>{{ post.author }} · {{ post.created_at|ago }} · {{ post.read_time }} min read</small>
+  </div>
+</article>
