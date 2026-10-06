@@ -7,7 +7,7 @@ register = template.Library()
 
 SOCIAL_ICONS = {
     'github': 'fa-github',
-    'linked': 'fa-linkedin',
+    'linke': 'fa-linkedin',
     'whatsapp': 'fa-whatsapp',
     'twitter': 'fa-twitter',
     'facebook': 'fa-facebook',

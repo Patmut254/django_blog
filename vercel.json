@@ -1,0 +1,8 @@
+{
+  "builds": [
+    { "src": "blog_main/wsgi.py", "use": "@vercel/python", "config": { "maxLambdaSize": "50mb" } }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "blog_main/wsgi.py" }
+  ]
+}

@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
+import shutil
+import warnings
 from pathlib import Path
+
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +25,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!1now&_i5pitj85a673za-i%)qv6@y7w50l1m$b$7j&(8go8!g'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-!1now&_i5pitj85a673za-i%)qv6@y7w50l1m$b$7j&(8go8!g')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# on Vercel, DEBUG is off unless the DEBUG env var is set to "True"
+ON_VERCEL = 'VERCEL' in os.environ
+DEBUG = os.environ.get('DEBUG', str(not ON_VERCEL)) == 'True'
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://*.vercel.app'] + [
+    o for o in os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',') if o
+]
+
+if not DEBUG:
+    # Vercel serves everything over HTTPS
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 
 # Application definition
@@ -47,6 +63,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -60,7 +77,7 @@ ROOT_URLCONF = 'blog_main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,12 +98,23 @@ WSGI_APPLICATION = 'blog_main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if os.environ.get('DATABASE_URL'):
+    # hosted Postgres (e.g. Neon / Vercel Postgres)
+    DATABASES = {'default': dj_database_url.config(conn_max_age=0)}
+elif ON_VERCEL:
+    # Vercel's filesystem is read-only, so work on a copy in /tmp.
+    # Changes (views, sign-ups, posts) only last until the instance is recycled.
+    TMP_DB = Path('/tmp/db.sqlite3')
+    if not TMP_DB.exists():
+        shutil.copy(BASE_DIR / 'db.sqlite3', TMP_DB)
+    DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': TMP_DB}}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 
 
 # Password validation
@@ -128,8 +156,12 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
-    'blog_main/static'
+    BASE_DIR / 'blog_main/static'
 ]
+
+# serve static files straight from the app folders (no collectstatic step needed on Vercel)
+WHITENOISE_USE_FINDERS = True
+warnings.filterwarnings('ignore', message='No directory at', module='whitenoise.base')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

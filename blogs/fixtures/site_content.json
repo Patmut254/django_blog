@@ -1,0 +1,618 @@
+[
+{
+  "model": "blogs.category",
+  "pk": 1,
+  "fields": {
+    "category_name": "Sports Today",
+    "created_at": "2026-02-04T22:44:02.322Z",
+    "updated_at": "2026-02-24T20:06:10.434Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 2,
+  "fields": {
+    "category_name": "Politics",
+    "created_at": "2026-02-04T22:47:24.944Z",
+    "updated_at": "2026-02-05T11:21:04.301Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 3,
+  "fields": {
+    "category_name": "Technology",
+    "created_at": "2026-02-05T11:20:57.081Z",
+    "updated_at": "2026-02-05T11:20:57.081Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 4,
+  "fields": {
+    "category_name": "Science",
+    "created_at": "2026-02-05T11:21:22.970Z",
+    "updated_at": "2026-02-05T11:21:22.970Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 5,
+  "fields": {
+    "category_name": "Travel",
+    "created_at": "2026-02-05T11:21:36.278Z",
+    "updated_at": "2026-02-05T11:21:36.279Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 7,
+  "fields": {
+    "category_name": "Business",
+    "created_at": "2026-10-06T15:21:55.467Z",
+    "updated_at": "2026-10-06T15:21:55.467Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 8,
+  "fields": {
+    "category_name": "Health",
+    "created_at": "2026-10-06T15:21:55.479Z",
+    "updated_at": "2026-10-06T15:21:55.479Z"
+  }
+},
+{
+  "model": "blogs.category",
+  "pk": 9,
+  "fields": {
+    "category_name": "Entertainment",
+    "created_at": "2026-10-06T15:21:55.490Z",
+    "updated_at": "2026-10-06T15:21:55.490Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 1,
+  "fields": {
+    "title": "Soccer AFCON Senegal and Morocco fines CAF",
+    "slug": "soccer-afcon-senegal-and-morocco-fines-caf",
+    "category": 1,
+    "author": 1,
+    "featured_image": "uploads/2026/02/05/gettyimages-2256403885-20260129110315929.avif",
+    "image_url": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Suspensions and hefty fines handed to Senegal and Morocco after chaotic AFCON finals. Suspensions and hefty fines handed to Senegal and Morocco after chaotic AFCON finals. Suspensions and hefty fines handed to Senegal and Morocco after chaotic AFCON finals. Suspensions and hefty fines handed to Senegal and Morocco after chaotic AFCON finals.",
+    "blog_body": "Now that the dust has settled on an Africa Cup of Nations final that will be remembered for years, African soccer’s governing body has handed out punishments for the chaos that ensued.\r\n\r\nFan trouble, players refusing to compete, controversial refereeing decisions, and a missed penalty were all flashpoints in a memorable match that was eventually won by Senegal.\r\n\r\nOn Thursday, as many expected, the Confederation of African Football (CAF) announced several punishments for both the Lions of Teranga and the beaten finalist Morocco, with individual players and managers also facing penalties.\r\n\r\nThe final will perhaps be remembered most for the decision by some of Senegal’s players to walk off the pitch in protest of a penalty being awarded to the Atlas Lions in the final moments of regulation time.\r\n\r\nSenegal manager Pape Thiaw has subsequently received a five-game ban from CAF and has been fined $100,000 for his role in leading the protest and for what is described as “unsporting conduct.”\r\n\r\nCAF also fined the Senegalese soccer federation (FSF) $300,000 for the “improper conduct of supporters,” after fans clashed with police in a frantic ending to the match. It also received another $300,000 fine for the conduct of its players and staff, in addition to a further $15,000 fine for five of its players receiving cautions from the referee.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-02-05T10:52:17.788Z",
+    "updated_at": "2026-10-06T15:21:57.341Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 2,
+  "fields": {
+    "title": "Tennis Vlada Hranchar Ukraine Prodigy",
+    "slug": "tennis-vlada-hranchar-ukraine-prodigy",
+    "category": 1,
+    "author": 1,
+    "featured_image": "uploads/2026/02/05/photo-3-20260106133358375.avif",
+    "image_url": "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "This 9-year-old escaped war in Ukraine. Now in the US, she’s tipped to be a future tennis superstar. This 9-year-old escaped war in Ukraine. Now in the US, she’s tipped to be a future tennis superstar. This 9-year-old escaped war in Ukraine. Now in the US, she’s tipped to be a future tennis superstar.",
+    "blog_body": "Some might say that it’s too early to predict the future of a nine-year-old sporting sensation, and often they would be right to.\r\n\r\nSo much can happen during a young athlete’s development: Bodies change, the risk of burnout increases and simply desire in the sport can simply wane.\r\n\r\nYet, despite all of this, legendary tennis coach Rick Macci says he’s currently training the next superstar of the sport, nine-year-old Vlada Hranchar.\r\n\r\n“I can see how she is wired and put together, and has a work ethic unsurpassed. All the other qualities as well, just the cardio and all these things wrapped in one. This little kid has every box checked.”\r\n\r\nIt’s quite the appraisal from a coach who has worked with some of the biggest names in the game, namely helping to kickstart the careers of both Serena and Venus Williams – a relationship which was the subject of the Oscar-winning film “King Richard” in 2021.\r\n\r\n\r\nHe is now is predicting a similar trajectory for Hranchar, and the story of how this astonishing young girl and her family wound up in their current position is worthy of a Hollywood script itself.\r\n\r\nHranchar was born in Ukraine to a sport-loving family. Her brother plays professional soccer in Ukraine and her parents allowed Hranchar to try out a variety of activities from an early age, including dance and gymnastics.\r\n\r\nBut, speaking to CNN Sports, Hranchar’s mom Maryna says her little daughter quickly became obsessed with just one sport – tennis.\r\n\r\nDuring her first visit to a court aged three, Hranchar told her parents she would “beat everyone.” Little did they know it would soon become true.\r\n\r\n“What I love about tennis is the competition. I love to beat everybody in matches. I want people to want to play like me one day,” Hranchar tells CNN Sports, giggling at her own confidence.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-02-05T11:38:58.945Z",
+    "updated_at": "2026-10-06T15:21:57.353Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 3,
+  "fields": {
+    "title": "Kenya’s 2025/26 Fiscal Choices and the Future of Civic Space",
+    "slug": "kenyas-202526-fiscal-choices-and-the-future-of-civic-space",
+    "category": 2,
+    "author": 1,
+    "featured_image": "uploads/2026/02/05/download_26.jpg",
+    "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "In developing democracies like Kenya, public financing is especially important in determining democratic resilience. The allocation and administration of public resources have. In developing democracies like Kenya, public financing is especially important in determining democratic resilience. The allocation and administration of public resources have.",
+    "blog_body": "In developing democracies like Kenya, public financing is especially important in determining democratic resilience. The allocation and administration of public resources have an impact on both economic growth and vibrancy of the civic space, which is essential for democratic governance. As the implementation of budget for the Financial Year 2025/26 enters the third quarter, the choices that policy makers made will be very crucial in determining how inclusive and participatory governance remains in the face of mounting fiscal pressure and political contestations .The decisions that government takes with regard to debt sustainability, revenue mobilization and spending priorities will have an impact on civil society organizations, media freedom, and public engagement which are key pillars of democratic governance.\r\n\r\nGovernment spending and governance is important for ensuring that resources are utilized to provide services and interests of the people. Whenever the government spending is efficiently managed and aligned with people’s needs, it strengthens the core democratic values of transparency, accountability and fairness. Strong oversight bodies, participatory budgeting, and transparent financial reporting enhances democratic governance by showing that government actions represent the collective interest of the public. In this way, the quality of public spending influences the quality of democratic governance, making important foundation for sustainable development, inclusive growth and long-term social cohesion.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-02-05T11:44:34.406Z",
+    "updated_at": "2026-10-06T15:21:57.364Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 4,
+  "fields": {
+    "title": "30 Years of World Politics: What Has Changed?",
+    "slug": "30-years-of-world-politics-what-has-changed",
+    "category": 2,
+    "author": 1,
+    "featured_image": "uploads/2026/02/05/download_27.jpg",
+    "image_url": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "What has changed in world politics over the thirty years since the Journal of Democracy published its inaugural issue in January 1990, and how has the Journal changed in response? What has changed in world politics over the thirty years since the Journal of Democracy published its inaugural issue in January 1990, and how has the Journal changed in response?",
+    "blog_body": "Since the publication of the Journal of Democracy began in 1990, the political climate has shifted from one of democratic gains and optimism to what Larry Diamond labels a “democratic recession.” Underlying these changes has been a reorientation of the major axis of political polarization, from a left-right divide defined largely in economic terms toward a politics based on identity. In a second major shift, technological development has had unexpected effects—including that of facilitating the rise of identity-based social fragmentation. The environment for democracy has been further transformed by other slow-moving changes, among them the shift toward neoliberal economic policies, the legacy of the wars in Iraq and Afghanistan, and lowered expectations regarding democratic transitions. Sustaining democracy will require rebuilding the legitimate authority of the institutions of liberal democracy, while resisting those powers that aspire to make nondemocratic institutions central.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-02-05T11:47:21.186Z",
+    "updated_at": "2026-10-06T15:21:57.376Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 5,
+  "fields": {
+    "title": "How iPhones Made a Surprising Comeback in China",
+    "slug": "how-iphones-made-a-surprising-comeback-in-china",
+    "category": 3,
+    "author": 1,
+    "featured_image": "uploads/2026/02/05/iPhones-Surprising-Comeback-China-Business-2258412162.webp",
+    "image_url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Huawei’s and Xiaomi’s flagship devices are packed with impressive features, but Apple is dominating the Chinese smartphone market again—for now. Huawei’s and Xiaomi’s flagship devices are packed with impressive features, but Apple is dominating the Chinese smartphone market again—for now.",
+    "blog_body": "After a prolonged slump, Apple’s business is suddenly thriving again in China. The tech giant said in its latest earnings report last week that revenue from the country rose 38 percent year over year in the last quarter, primarily driven by surging demand for iPhones. The rebound came after Apple’s China sales had declined for 18 consecutive months between 2024 and early 2025.After a prolonged slump, Apple’s business is suddenly thriving again in China. \r\nThe tech giant said in its latest earnings report last week that revenue from the country rose 38 percent year over year in the last quarter, primarily driven by surging demand for iPhones. The rebound came after Apple’s China sales had declined for 18 consecutive months between 2024 and early 2025.After a prolonged slump, Apple’s business is suddenly thriving again in China. The tech giant said in its latest earnings report last week that revenue from the country rose 38 percent year over year in the last quarter, primarily driven by surging demand for iPhones. The rebound came after Apple’s China sales had declined for 18 consecutive months between 2024 and early 2025.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 0,
+    "created_at": "2026-02-05T11:49:34.607Z",
+    "updated_at": "2026-10-06T15:21:57.390Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 6,
+  "fields": {
+    "title": "Technology: The Good, The Bad, The Ugly",
+    "slug": "technology-the-good-the-bad-the-ugly",
+    "category": 3,
+    "author": 1,
+    "featured_image": "uploads/2026/02/05/john-yFbyvpEGHFQ-unsplash.jpg",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Technology is not considered to be inherently good or bad. Instead, its value depends on how it is used. But there have been modern studies that do show the negative effects of technology on the body and mind. For example, Medical News Today cited a study that associated time spent on social media with depression symptoms.",
+    "blog_body": "Getting the most out of our tech tools\r\nTechnology is a critical component of our world today. From communication and time management to manufacturing and healthcare, tech tools have an enormous impact on our lives. And for students at UA Grantham, it’s also what allows them to find success in school no matter where they are located.\r\n\r\nThere’s always a tradeoff, of course, and sometimes it feels like our technology is taking over our lives. Let’s take a look at the good, the bad, and the ugly sides of technology today—and how we can make sure that we’re getting the most out of these tools without falling into some common traps.\r\n\r\nThe Good\r\nLet’s start with the benefits that technology offers us. There is no question that we’re more connected than ever before, which means that most of our family, friends, coworkers, and loved ones are just a text, call, email, or video chat away. Stop and appreciate this for a moment! As difficult as being apart, for any reason, can be, we can still talk in real time with those who matter most.\r\n\r\nThat also means we don’t have to relinquish many of our routines, no matter what else is going on in the world. Technology allows us to keep working, communicating, going to school, shopping, going to doctor or therapy appointments, playing games, and staying aware of current events.\r\n\r\nAnd it allows us to do so with even more ease: Google’s product suite, for instance, can help you write, format, present, calculate, collaborate, remind, and share all from one platform alone. The resources available today have made it possible to easily learn, share, and create in a truly global environment.\r\n\r\nTechnology allows students to watch lectures, participate in discussion groups, complete assignments, and earn their degrees from the comfort of their own homes. Online learning platforms make it possible to skip the commute to campus, eliminate the need for exams by mail, and improve efficiency.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 0,
+    "created_at": "2026-02-05T11:51:59.482Z",
+    "updated_at": "2026-10-06T15:21:57.404Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 7,
+  "fields": {
+    "title": "The Science Behind the Perfect Free Kick",
+    "slug": "the-science-behind-the-perfect-free-kick",
+    "category": 1,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Spin, speed and a wall of defenders: why the best free-kick takers spend years mastering a strike that lasts less than a second.",
+    "blog_body": "A well-struck free kick looks like art, but it is really applied physics. When a player strikes the ball off-centre, it leaves the boot spinning, and that spin drags a thin layer of air around with it. Pressure drops on one side of the ball and rises on the other, bending its path in what scientists call the Magnus effect.\n\nThe very best takers combine that curl with dip. By striking through the lower half of the ball with the laces and a short follow-through, they add topspin that pulls the ball down sharply once it clears the wall. Goalkeepers read the first half of the flight and are beaten by the second.\n\nThen there is the knuckleball, the strike that barely spins at all. Without spin, the air flowing around the ball becomes unstable, and tiny changes in the seams cause it to wobble unpredictably. Even the player who hits it cannot be sure where it will finish, which is exactly why goalkeepers fear it.\n\nNone of this happens by accident. Specialist coaches say elite takers practise hundreds of repetitions a week, often from the same five or six positions around the box. They learn how a wet ball skids, how a light ball floats at altitude and how much a crowd's noise changes their run-up rhythm.\n\nThe result is a moment that looks spontaneous but is built on thousands of hours of quiet, repetitive work on empty training pitches.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 280,
+    "created_at": "2026-10-06T14:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.415Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 8,
+  "fields": {
+    "title": "Inside the Mind of an Elite Marathon Runner",
+    "slug": "inside-the-mind-of-an-elite-marathon-runner",
+    "category": 1,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "For the world's best distance runners, the hardest part of 42.195 kilometres is not the legs. It is the conversation inside their heads.",
+    "blog_body": "By the thirty-kilometre mark of a marathon, almost every runner's body is sending the same message: stop. Glycogen stores are nearly empty, muscle fibres are damaged and core temperature is climbing. What separates the elite from everyone else is not the absence of that message but how they respond to it.\n\nSports psychologists describe two broad strategies. Association means paying close attention to the body: breathing, cadence, the feel of each foot strike. Dissociation means drifting away from discomfort by thinking about something else entirely. Research suggests the fastest runners lean heavily on association, constantly checking in with their bodies and adjusting pace in tiny increments.\n\nMany elite athletes also break the race into small, manageable pieces. Instead of thinking about the twelve kilometres still to go, they focus on reaching the next drinks station or the next turn in the road. Each small target is a win, and each win buys a little more resolve.\n\nTraining builds this mental muscle as much as it builds physical fitness. Long runs at goal pace teach athletes what controlled discomfort feels like, so that on race day the feeling is familiar rather than frightening.\n\nFor recreational runners, the lesson is simple: the mind can be trained just like the legs. Practise staying present on hard sessions, and the final kilometres of your next race may feel a little less lonely.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 245,
+    "created_at": "2026-10-06T11:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.429Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 9,
+  "fields": {
+    "title": "Why the Three-Point Revolution Is Here to Stay",
+    "slug": "why-the-three-point-revolution-is-here-to-stay",
+    "category": 1,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Basketball has been transformed by a simple bit of maths. Here is why teams keep shooting from deep, and what it has done to the game.",
+    "blog_body": "For decades, basketball coaches preached the value of getting close to the basket. Then analysts did some arithmetic. A team that makes 36 percent of its three-point attempts scores about 1.08 points per shot. A team that makes 45 percent of its long two-pointers scores just 0.9. The gap may look small, but over a season of thousands of possessions it decides championships.\n\nThat insight reshaped the sport. Teams now prize players who can space the floor, and the mid-range jumper, once the signature shot of the game's greatest scorers, has become comparatively rare. Offences are designed to produce either a layup or an open three, with very little in between.\n\nCritics argue that the style has made games feel repetitive, with long stretches of players hoisting shots from well beyond the arc. Supporters counter that it has opened the floor, made the game faster and rewarded skill over size.\n\nThe change has reached every level. Youth coaches report that young players now spend more time practising long-range shooting than post moves, and that skill development has become more position-less as a result.\n\nWhether you love it or not, the maths has not changed, and as long as three is greater than two, the long ball is not going anywhere.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 206,
+    "created_at": "2026-10-06T08:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.440Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 10,
+  "fields": {
+    "title": "How Swimmers Shave Hundredths of a Second",
+    "slug": "how-swimmers-shave-hundredths-of-a-second",
+    "category": 1,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "At the elite level, races are decided by margins smaller than a blink. Swimmers chase those margins in the details most spectators never notice.",
+    "blog_body": "In elite swimming, a hundredth of a second can separate a gold medal from fourth place. That is roughly the length of a fingernail at race speed. To find those margins, swimmers and coaches obsess over parts of the race that casual viewers barely see.\n\nThe start is the first battleground. Modern starting blocks have an angled back plate that lets swimmers push off with both legs, and the best athletes spend hours refining their reaction time and entry angle so that they slip into the water through a single small hole.\n\nUnderwater phases matter even more. A swimmer gliding beneath the surface faces far less drag than one swimming on top of it, which is why races are full of powerful dolphin kicks off every wall. Rules limit underwater distance to fifteen metres, and the strongest kickers use nearly all of it.\n\nTurns, too, are a craft of their own. A good tumble turn is compact and explosive, with feet planted at precisely the right depth. Over a 1500-metre race there can be twenty-nine of them, and a tenth lost on each adds up quickly.\n\nFinally there is the finish. Swimmers are taught to time their last stroke so that they reach the wall with arms fully extended rather than gliding in. It is a small thing, but in a sport measured in hundredths, small things are everything.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 169,
+    "created_at": "2026-10-06T05:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.451Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 11,
+  "fields": {
+    "title": "Big-Wave Surfing: Chasing the Ocean's Tallest Walls",
+    "slug": "big-wave-surfing-chasing-the-oceans-tallest-walls",
+    "category": 1,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Big-wave surfers spend months waiting for a few hours of perfect swell. When it arrives, preparation is the only thing that keeps them safe.",
+    "blog_body": "Big-wave surfing is a sport of patience punctuated by terror. Surfers watch weather models for weeks, tracking storms thousands of kilometres away, waiting for the rare combination of swell size, wind direction and tide that turns a quiet reef into a mountain of moving water.\n\nWhen the swell arrives, the margins are unforgiving. A wipeout on a wave the height of a building can hold a surfer underwater for well over a minute and push them metres beneath the surface. To prepare, big-wave athletes train their breath-holding in swimming pools, often carrying rocks along the bottom to simulate the stress of being held down.\n\nSafety has improved dramatically. Inflatable vests can be triggered to pull a surfer to the surface, and teams of jet-ski drivers wait in the channel to pull riders out of the impact zone between sets. Many surfers say these teams are the real heroes of the sport.\n\nSome waves are so large and fast that paddling into them is almost impossible, so surfers are towed in behind jet skis. Others are ridden by paddling alone, which purists regard as the ultimate test of skill and nerve.\n\nAsk a big-wave surfer why they do it and the answer is rarely about adrenaline. More often it is about respect for the ocean, and about the rare, quiet clarity that comes from riding something so much bigger than yourself.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 132,
+    "created_at": "2026-10-06T02:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.464Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 12,
+  "fields": {
+    "title": "The Tactical Art of the Peloton",
+    "slug": "the-tactical-art-of-the-peloton",
+    "category": 1,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Professional cycling looks like a race between individuals, but it is really a moving game of chess played by teams at fifty kilometres an hour.",
+    "blog_body": "To a casual viewer, a road race can look like a long, colourful procession. In reality, the peloton is one of the most tactically complex environments in sport.\n\nThe key is aerodynamics. A rider tucked behind others can save around thirty percent of their energy compared with riding alone at the front. That is why teams protect their leaders inside the bunch, surrounding them with teammates known as domestiques who shelter them from the wind, fetch bottles from the team car and chase down dangerous attacks.\n\nBreakaways are another layer of strategy. Small groups often escape early in a stage, hoping the peloton will underestimate them. The chasing teams must calculate exactly how much time to allow, because pulling back a breakaway too early wastes energy, and leaving it too late can cost them the stage.\n\nOn mountain days, tactics change again. Drafting matters less at slow climbing speeds, so pure power-to-weight ratio becomes decisive. Teams try to set a pace so high that rivals' helpers are dropped one by one, leaving the opposition leader isolated.\n\nNext time you watch a race, look beyond the rider in front. The real story is usually unfolding in the middle of the bunch.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 95,
+    "created_at": "2026-10-05T23:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.476Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 13,
+  "fields": {
+    "title": "Why Local Elections Matter More Than You Think",
+    "slug": "why-local-elections-matter-more-than-you-think",
+    "category": 2,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "National races grab the headlines, but the decisions that shape daily life, from schools to rubbish collection, are often made much closer to home.",
+    "blog_body": "Turnout in local elections is often a fraction of what national contests attract. Yet the people chosen in those quieter polls make many of the decisions that most directly affect everyday life.\n\nLocal councils and county assemblies typically control land use and planning, which determines where homes, markets and roads are built. They oversee services such as waste collection, water, street lighting and public parks, and in many places they play a central role in primary education and health clinics.\n\nBecause turnout is low, every vote carries more weight. A council seat can be won or lost by a few dozen ballots, and a motivated neighbourhood group can genuinely change the outcome. That also means local representatives are often more reachable than national politicians; many hold open surgeries where residents can raise problems in person.\n\nLocal government is also a training ground. Many national leaders began their careers on a council, learning how budgets work and how to build coalitions across party lines.\n\nIf you want to make a difference without waiting years for the next national vote, the most effective place to start may be your local ballot paper, and the town hall meeting that most of your neighbours will skip.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 58,
+    "created_at": "2026-10-05T20:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.488Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 14,
+  "fields": {
+    "title": "What Large Language Models Can and Can't Do",
+    "slug": "what-large-language-models-can-and-cant-do",
+    "category": 3,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "AI chatbots can draft emails, write code and summarise reports. Understanding how they work helps explain both their strengths and their limits.",
+    "blog_body": "Large language models have moved from research labs into everyday tools in a remarkably short time. They help people write, summarise documents, translate text and even generate working software. But to use them well, it helps to understand what they are actually doing.\n\nAt their core, these models are trained on enormous amounts of text to predict what comes next in a sequence. Through that process they learn grammar, facts, styles of reasoning and patterns of conversation. The result can be surprisingly capable: models can follow detailed instructions, adapt their tone and explain complex ideas in plain language.\n\nTheir limits come from the same place. A model does not automatically know whether a statement is true; it produces what is plausible given its training. That is why careful users verify important facts, ask for sources and treat outputs as a strong first draft rather than a final answer.\n\nContext is another factor. Models work best when they are given clear goals, relevant background and examples of what good output looks like. Vague requests tend to produce vague answers.\n\nUsed thoughtfully, language models can save hours of routine work and help people learn faster. The key is to treat them as a capable collaborator, one that still benefits from a human checking its work.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 521,
+    "created_at": "2026-10-05T17:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.501Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 15,
+  "fields": {
+    "title": "The Global Chip Supply Chain, Explained",
+    "slug": "the-global-chip-supply-chain-explained",
+    "category": 3,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Almost every modern device depends on semiconductors, and making them involves one of the most complex supply chains ever built.",
+    "blog_body": "The microchips inside phones, cars and data centres are the product of a supply chain that spans continents. No single country makes a modern chip from start to finish.\n\nThe journey begins with design. Engineering teams create chip architectures using specialised software, often licensing building blocks from other companies. These designs are then sent to foundries, highly specialised factories that turn silicon wafers into finished circuits.\n\nBuilding a leading-edge foundry can cost tens of billions of dollars and take years. Inside, wafers pass through hundreds of steps, including the use of extreme ultraviolet lithography machines that print features thousands of times thinner than a human hair. Only a handful of companies in the world can make those machines.\n\nAfter fabrication, chips are cut, tested and packaged, often in yet another country, before being shipped to device makers for assembly. A disruption at any point, from a factory fire to a shortage of specialist gases, can ripple through the entire chain.\n\nThat fragility was laid bare during recent shortages, when carmakers idled production lines for want of inexpensive chips. Governments have since invested heavily in domestic manufacturing, but experts say the industry will remain deeply interconnected for years to come.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 484,
+    "created_at": "2026-10-05T14:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.518Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 16,
+  "fields": {
+    "title": "Learning to Code in 2026: Where to Start",
+    "slug": "learning-to-code-in-2026-where-to-start",
+    "category": 3,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "With AI assistants writing code and new frameworks every month, beginners have more choice than ever. Here is a practical path through the noise.",
+    "blog_body": "Learning to program has never been more accessible, and it has never been more overwhelming. There are thousands of courses, dozens of popular languages and a constant stream of new tools. The good news is that the fundamentals have not changed.\n\nStart with one beginner-friendly language and stay with it. Python and JavaScript are popular choices because they have huge communities, readable syntax and countless free resources. The specific language matters less than learning core ideas such as variables, loops, functions and data structures.\n\nBuild small projects as soon as possible. A to-do list, a personal budget tracker or a simple blog teaches far more than watching tutorials passively. Projects force you to search for answers, read documentation and debug errors, which is most of what professional developers do.\n\nAI coding assistants can be valuable teachers if used carefully. Ask them to explain code line by line, or to suggest why something is broken, rather than simply copying their answers. Understanding is the goal, not just working output.\n\nFinally, share your work. Put projects on GitHub, join a local meet-up or an online community, and ask for feedback. Consistent practice, a few hours each week, will take you further than any single course.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 447,
+    "created_at": "2026-10-05T11:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.539Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 17,
+  "fields": {
+    "title": "What Earth at Night Reveals About Us",
+    "slug": "what-earth-at-night-reveals-about-us",
+    "category": 4,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Satellite images of our planet after dark show far more than city lights. Scientists use them to track economies, disasters and even fishing fleets.",
+    "blog_body": "Seen from orbit at night, Earth glitters with the lights of human activity. Coastlines are traced in gold, highways appear as glowing threads and great cities blaze like galaxies. These images are beautiful, but for researchers they are also a rich source of data.\n\nNight-light data can track economic growth in places where official statistics are scarce. As towns electrify and expand, their glow grows brighter and wider, giving economists a consistent, independent measure of development.\n\nThe same data helps during emergencies. After hurricanes, earthquakes or conflicts, scientists compare before-and-after images to see where power has been lost, helping aid agencies prioritise their response.\n\nSome of the lights are not on land at all. Fishing boats that use bright lamps to attract squid show up clearly at sea, allowing researchers to monitor fishing activity in remote waters.\n\nThere is a darker side too. Light pollution disrupts the behaviour of migrating birds, nesting sea turtles and nocturnal insects, and it hides the stars from most of humanity. Scientists hope that by mapping it carefully, cities can learn to light streets more efficiently and give the night sky back.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 410,
+    "created_at": "2026-10-05T08:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.571Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 18,
+  "fields": {
+    "title": "How Cancer Cells Hide From the Immune System",
+    "slug": "how-cancer-cells-hide-from-the-immune-system",
+    "category": 4,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "The body is remarkably good at destroying damaged cells. Understanding how tumours slip past its defences has led to some of medicine's biggest breakthroughs.",
+    "blog_body": "Every day, cells in the human body acquire mutations, and the immune system quietly destroys many of those that could become dangerous. Cancer develops when abnormal cells find ways to escape that surveillance.\n\nOne of the most important escape routes involves immune checkpoints. These are molecular brakes that normally stop immune cells from attacking healthy tissue. Some tumours exploit them by displaying signals that effectively tell immune cells to stand down.\n\nDrugs known as checkpoint inhibitors block those signals, releasing the brakes so the immune system can attack the cancer again. For some patients with advanced melanoma, lung cancer and other diseases, these treatments have produced lasting responses that were unimaginable a generation ago.\n\nThey do not work for everyone. Some tumours have few distinctive features for the immune system to recognise, and others create a surrounding environment that suppresses immune activity. Researchers are now testing combinations of treatments, personalised vaccines and engineered immune cells to overcome these barriers.\n\nThe field is moving quickly, but the central idea is simple and powerful: rather than attacking cancer directly, help the body's own defences do the job they evolved to do.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 373,
+    "created_at": "2026-10-05T05:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.584Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 19,
+  "fields": {
+    "title": "A Slow Journey Through the Italian Dolomites",
+    "slug": "a-slow-journey-through-the-italian-dolomites",
+    "category": 5,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Jagged peaks, emerald lakes and mountain huts serving homemade dumplings: the Dolomites reward travellers who take their time.",
+    "blog_body": "The Dolomites rise from northern Italy like a stone cathedral, their pale limestone towers turning pink and orange at sunrise and sunset. Many visitors race between viewpoints in a single day, but the region is best experienced slowly.\n\nStart in one of the valley towns and spend a few nights there. Mornings can be spent on gentle lake walks, where wooden rowing boats drift across water so clear it looks unreal, while afternoons are perfect for cable cars that lift you to high meadows without a punishing climb.\n\nFor more adventurous travellers, the network of mountain huts, known as rifugi, makes multi-day hikes possible without carrying a tent. Each evening ends with a hearty dinner, often including dumplings, polenta or apple strudel, shared with walkers from around the world.\n\nThe region's history adds depth to every view. Its mix of Italian, German and Ladin cultures is reflected in place names, food and architecture, and the remains of First World War fortifications can still be seen along some high trails.\n\nVisit in early summer or September to avoid the busiest weeks, book huts well in advance and leave room in your plans for a lazy afternoon. In mountains this beautiful, the best moments are often the unplanned ones.",
+    "status": "Published",
+    "is_featured": true,
+    "views": 336,
+    "created_at": "2026-10-05T02:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.600Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 20,
+  "fields": {
+    "title": "Road-Tripping the American Southwest",
+    "slug": "road-tripping-the-american-southwest",
+    "category": 5,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Red rock canyons, empty desert highways and star-filled skies: how to plan an unforgettable drive through one of the world's great landscapes.",
+    "blog_body": "Few journeys capture the romance of the open road like a drive through the American Southwest. The landscape changes by the hour, from towering red sandstone to sweeping desert plateaus and deep canyons carved over millions of years.\n\nPlanning is essential. Distances are long and fuel stations can be far apart, so fill up whenever you can and carry plenty of water. Summer temperatures can be extreme, which makes spring and autumn the most comfortable seasons for hiking and sightseeing.\n\nNational parks are the highlights, but popular ones can require timed-entry reservations at busy times, so check ahead. Arriving early in the morning rewards you with cooler air, softer light and far fewer people on the trails.\n\nLeave space for the smaller stops in between: roadside diners, tiny museums and viewpoints that do not appear in guidebooks. Some of the region's most memorable experiences happen on quiet back roads.\n\nAt night, look up. With little light pollution, much of the Southwest offers some of the darkest skies in the country, and seeing the Milky Way stretch across the desert is reason enough to make the trip.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 299,
+    "created_at": "2026-10-04T23:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.621Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 21,
+  "fields": {
+    "title": "Reading a Market Correction Without Panicking",
+    "slug": "reading-a-market-correction-without-panicking",
+    "category": 7,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Falling share prices make headlines and nerves jangle. Here is how long-term investors can think clearly when the market turns red.",
+    "blog_body": "A market correction is usually defined as a fall of ten percent or more from a recent high. It sounds alarming, and the headlines often make it feel worse, but corrections are a normal part of investing and historically have happened roughly once every year or two.\n\nThe first rule is to remember your time horizon. Money you will not need for ten years or more has time to recover from short-term swings. Selling in a panic can turn a temporary paper loss into a permanent one, and investors who sell often miss the strongest days of the rebound.\n\nCorrections can also be a moment to review rather than react. Check whether your mix of investments still matches your goals and tolerance for risk. If a fall has left your portfolio unbalanced, gradual rebalancing can help.\n\nRegular investing smooths the ride. By putting in a fixed amount each month, you automatically buy more shares when prices are low and fewer when they are high, a strategy known as pound-cost or dollar-cost averaging.\n\nFinally, keep an emergency fund in cash. Knowing you can cover several months of expenses without touching your investments makes it far easier to stay calm when markets wobble.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 262,
+    "created_at": "2026-10-04T20:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.633Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 22,
+  "fields": {
+    "title": "A Personal Budget That Actually Sticks",
+    "slug": "a-personal-budget-that-actually-sticks",
+    "category": 7,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Most budgets fail within weeks. A few simple habits can turn a spreadsheet you dread into a plan you actually follow.",
+    "blog_body": "Many people start the year with an ambitious budget and abandon it by February. The problem is rarely a lack of discipline; it is usually a plan that does not fit real life.\n\nBegin by tracking what you actually spend for one month without trying to change anything. Bank apps and simple spreadsheets make this easy. The goal is an honest picture, not a perfect one.\n\nNext, try a simple framework such as the 50/30/20 rule: roughly half of take-home pay for needs such as rent and food, thirty percent for wants and twenty percent for savings or debt repayment. The exact numbers can flex, but the structure keeps decisions simple.\n\nAutomate wherever possible. Set up transfers to savings on payday so the money moves before you have a chance to spend it, and schedule regular bills so nothing is missed.\n\nFinally, build in fun. A budget with no room for enjoyment is a budget you will break. Allow yourself a guilt-free spending amount each month, review your progress regularly and adjust as your life changes.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 225,
+    "created_at": "2026-10-04T17:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.648Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 23,
+  "fields": {
+    "title": "The Ten-Minute Workout Backed by Research",
+    "slug": "the-ten-minute-workout-backed-by-research",
+    "category": 8,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "No time for the gym? Short, intense bursts of exercise can deliver real health benefits, as long as you do them consistently.",
+    "blog_body": "Lack of time is one of the most common reasons people give for not exercising. The encouraging news from sports science is that even short workouts can make a measurable difference.\n\nHigh-intensity interval training, often shortened to HIIT, alternates brief periods of hard effort with short recoveries. Studies have found that sessions lasting ten to twenty minutes can improve cardiovascular fitness and blood sugar control, particularly in people who were previously inactive.\n\nA simple routine might include jumping jacks, bodyweight squats, push-ups and mountain climbers, each performed for forty seconds followed by twenty seconds of rest, repeated twice. No equipment is needed, and it can be done in a living room.\n\nIntensity is relative. For a beginner, a brisk walk up a hill may be high-intensity, and that is fine. The key is to work hard enough that talking becomes difficult during each interval, then recover fully.\n\nShort workouts are not a complete substitute for an active lifestyle, and health guidelines still recommend regular movement throughout the week. But on busy days, ten focused minutes is far better than nothing, and it might be the habit that sticks.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 188,
+    "created_at": "2026-10-04T14:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.665Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 24,
+  "fields": {
+    "title": "What a Mediterranean Plate Really Looks Like",
+    "slug": "what-a-mediterranean-plate-really-looks-like",
+    "category": 8,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "The Mediterranean diet is consistently ranked among the healthiest in the world. It is less about strict rules and more about a way of eating.",
+    "blog_body": "The Mediterranean diet has been studied for decades and is consistently linked to lower risks of heart disease and other chronic conditions. Despite its reputation, it is not a strict plan with forbidden foods. It is a pattern of eating inspired by traditional cooking around the Mediterranean Sea.\n\nVegetables, fruit, whole grains and legumes form the foundation of most meals. Olive oil is the main source of fat, used generously for cooking and dressing salads. Nuts and seeds appear as snacks, and herbs and spices add flavour in place of excess salt.\n\nFish and seafood are eaten regularly, while poultry, eggs and dairy appear in moderate amounts. Red meat and sweets are enjoyed occasionally rather than daily.\n\nA typical plate might include a large salad with chickpeas and olive oil, a piece of grilled fish, a portion of whole-grain bread and a handful of fresh fruit for dessert. Simple, seasonal and satisfying.\n\nJust as important is how food is eaten. Traditional Mediterranean meals are often shared slowly with family and friends, and researchers increasingly believe that social connection may be part of the diet's benefits.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 151,
+    "created_at": "2026-10-04T11:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.677Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 25,
+  "fields": {
+    "title": "Why Live Music Still Feels Different",
+    "slug": "why-live-music-still-feels-different",
+    "category": 9,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Streaming puts millions of songs in our pockets, yet concert tickets keep selling out. What is it about hearing music in a crowd?",
+    "blog_body": "In an age when almost any song can be streamed instantly, more people than ever are paying to see music performed live. Festivals sell out months in advance and arena tours break attendance records. So what is the draw?\n\nPart of it is physical. At a concert, music is not just heard but felt: the bass vibrates through the floor and the volume fills the body in a way headphones cannot reproduce.\n\nPart of it is social. Researchers have found that when people experience music together, their heart rates and movements can begin to synchronise. Singing along with thousands of strangers creates a powerful sense of belonging that is hard to find elsewhere.\n\nThere is also the thrill of the unrepeatable. A live show can include new arrangements, unexpected guests, mistakes and moments of spontaneity. Fans know they are witnessing something that will never happen in quite the same way again.\n\nFor artists, live performance has become an essential source of income as streaming pays relatively little per play. For audiences, it remains one of the purest forms of shared joy.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 114,
+    "created_at": "2026-10-04T08:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.688Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 26,
+  "fields": {
+    "title": "The Quiet Return of the Neighbourhood Cinema",
+    "slug": "the-quiet-return-of-the-neighbourhood-cinema",
+    "category": 9,
+    "author": 1,
+    "featured_image": "",
+    "image_url": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600&q=80&auto=format&fit=crop",
+    "short_description": "Small independent cinemas were written off in the streaming era. Many are now thriving by offering something a sofa cannot.",
+    "blog_body": "When streaming services exploded, many predicted the end of the small cinema. Why travel and pay for a ticket when thousands of films are available at home? Yet in towns and cities around the world, independent picture houses are finding new audiences.\n\nTheir secret is experience. Many have restored historic buildings, added comfortable seating and opened cafes and bars where audiences linger before and after screenings. A trip to the cinema has become a night out rather than simply a way to watch a film.\n\nProgramming is another strength. Independent cinemas show classics, foreign-language films, documentaries and local productions that rarely appear in large multiplexes. Themed seasons, director talks and community screenings give people a reason to return.\n\nSome venues have become cultural hubs, hosting film clubs, school screenings and festivals. Others offer relaxed screenings for families with young children or people with sensory sensitivities.\n\nThe lesson is that people still crave shared experiences. A good film watched in the dark among strangers, laughing and gasping together, remains one of life's small pleasures.",
+    "status": "Published",
+    "is_featured": false,
+    "views": 77,
+    "created_at": "2026-10-04T05:21:55.572Z",
+    "updated_at": "2026-10-06T15:21:57.699Z"
+  }
+},
+{
+  "model": "assignments.about",
+  "pk": 1,
+  "fields": {
+    "about_heading": "About Me:",
+    "about_description": "This blog is a space where I share practical insights on technical topics, life, and real-world projects. My focus is on learning by doing. With clear explanations, useful tips, and lessons",
+    "created_at": "2026-02-10T18:48:17.494Z",
+    "updated_at": "2026-02-10T18:48:17.494Z"
+  }
+},
+{
+  "model": "assignments.sociallink",
+  "pk": 1,
+  "fields": {
+    "platform": "Github",
+    "link": "https://github.com/Patmut254/",
+    "created_at": "2026-02-10T20:30:18.653Z",
+    "updated_at": "2026-02-10T20:30:18.653Z"
+  }
+},
+{
+  "model": "assignments.sociallink",
+  "pk": 2,
+  "fields": {
+    "platform": "Linkeldn",
+    "link": "https://www.linkedin.com/in/anitamutemi/",
+    "created_at": "2026-02-10T20:30:50.781Z",
+    "updated_at": "2026-02-10T20:30:50.781Z"
+  }
+},
+{
+  "model": "assignments.sociallink",
+  "pk": 3,
+  "fields": {
+    "platform": "My Portfolio",
+    "link": "https://anitam-port.netlify.app/",
+    "created_at": "2026-02-10T20:31:46.294Z",
+    "updated_at": "2026-02-10T20:31:46.294Z"
+  }
+},
+{
+  "model": "assignments.sociallink",
+  "pk": 4,
+  "fields": {
+    "platform": "WhatsApp",
+    "link": "https://wa.me/254714676921",
+    "created_at": "2026-02-10T20:33:19.611Z",
+    "updated_at": "2026-02-10T20:33:19.611Z"
+  }
+}
+]
